@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world</title>
+</head>
+<body style="background-color:powderblue;">
+    <h1>Form</h1>
+    <form action="/action_page.php" style="text-align:center;">
+        <fieldset style="width:25%">
+            <legend style="font-size:150%;">Contact information</legend>
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First name" style="background-color:rgb(253, 253, 137)"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last name" style="background-color:rgb(253, 253, 137)"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" placeholder="Email" style="background-color:rgb(253, 253, 137)"><br>
+
+            <label for="tel">Phone number:</label><br>
+            <input type="tel" name="tel" id="tel" placeholder="Phone number" style="background-color:rgb(253, 253, 137)"><br>
+
+            <label for="checkbox">Preferred contact method:</label><br>
+            <input type="checkbox" id="contact1" name="contact1>
+            <label for="contact1"> Email</label>
+            <input type="checkbox" id="contact2" name="contact2>
+            <label for="contact2"> Phone</label><br>
+        </fieldset>
+        <br>
+        <fieldset style="width:25%">
+            <legend style="font-size:150%;">Feedback:</legend>
+
+            <label for="subject">Message subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject" style="background-color:rgb(253, 253, 137)"><br><br>
+
+            <textarea name="message" rows="15" cols="50" style="background-color:rgb(253, 253, 137)">
+              </textarea><br>
+
+            <label for="file">Attach a file:</label>
+            <input type="file" id="file" name="file"><br><hr><br>
+            
+            <input type="submit" value="Send" style="background-color:rgb(253, 253, 137)">
+        </fieldset>
+    </form>
+</body>
+</html>
