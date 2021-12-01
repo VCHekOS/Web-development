@@ -5,11 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="jsCalculator.js"></script>
 </head>
 <body>
-    <h1>Calculator 1</h1>
+
+    <h1>Calculator with text box and dropdown list</h1>    
+    <input type="text" id="num1" size="8" placeholder="Type number">
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="text" id="num2" size="8" placeholder="Type number">
+    <button type="button" onclick="getvaluesFromCalculator1()" id="equal">=</button>
+    <p id="result"></p>
+
+    <h1>Calculator with text box and option buttons</h1>
+    <input type="text" id="n1" size="8" placeholder="Type number">
+
+    <form id="selection">
+        <input type="radio" name="sel" value="+">
+        <label for="add">Addition</label><br>
+        <input type="radio" name="sel" value="-">
+        <label for="sub">Substraction</label><br>
+        <input type="radio" name="sel" value="*">
+        <label for="mul">Multiplication</label><br>
+        <input type="radio" name="sel" value="/">
+        <label for="div">Division</label>
+    </form>
+
+    <input type="text" id="n2" size="8" placeholder="Type number"><br><br>
+    <button type="button" onclick="getvaluesFromCalculator2()">=</button>
+    <p id="res"></p>
     
-<input type="text" id="num1">
+    <h1>Calculator with text box and option buttons</h1>
+
+    <button type="button"  onclick="increase(1)"><img src="https://img.icons8.com/emoji/48/000000/upwards-button-emoji.png" height="20px"/></button>
+    <input type="text" id="number1" size="3" placeholder="Number">
+    <button type="button"  onclick="decrease(1)"><img src="https://img.icons8.com/emoji/48/000000/downwards-button-emoji.png" height="20px"/></button>
+
+    <select name="operator" id="action">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <button type="button"  onclick="increase(2)"><img src="https://img.icons8.com/emoji/48/000000/upwards-button-emoji.png" height="20px"/></button>
+    <input type="text" id="number2" size="3" placeholder="Number">
+    <button type="button"  onclick="decrease(2)"><img src="https://img.icons8.com/emoji/48/000000/downwards-button-emoji.png" height="20px"/></button>
+
+    <button type="button" onclick="getvaluesFromCalculator3()" id="equal">=</button>
+    <p id="answer"></p>
 
 </body>
 </html>
