@@ -5,46 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello world</title>
+
+    <style>
+        body {
+          font-family: "Lato", sans-serif;
+          transition: background-color .5s;
+          background-color: lavenderblush;
+        }
+        
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color:rgb(191, 191, 255);
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: rgb(143, 45, 209);
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        
+        #main {
+          transition: margin-left .5s;
+          padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        </style>
+
 </head>
-<body style="background-color:rgb(221, 215, 240);">
-    <h1>Form</h1>
-    <form action="C:\WORK\test1/index.php" style="text-align:center;">
-        <fieldset style="width:25%">
-            <legend style="font-size:150%;">Contact information</legend>
+<body>
 
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="First name" style="background-color:rgb(238, 157, 231)"><br>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://vchekos.github.io/Web-development/">Home</a>
+        <a href="https://github.com/VCHekOS/Web-development">Web projects</a>
+        <a href="#">Python projects</a>
+        <a href="https://vchekos.github.io/Web-development/HTML/Calculator.html">Calculators</a>
+        <a href="https://google.com/maps">Maps</a>
+        <a href="https://vchekos.github.io/Web-development/HTML/Gallery.html">Gallery</a>
+        <a href="https://vchekos.github.io/Web-development/HTML/Forms.html">Feedback</a>
+        </div>
+      
+      <div id="main">
+       
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Last name" style="background-color:rgb(238, 157, 231)"><br>
+        <h1>Form</h1>
+        <form action="C:\WORK\test1/index.php" style="text-align:center;">
+            <fieldset style="width:25%">
+                <legend style="font-size:150%;">Contact information</legend>
+    
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="First name" style="background-color:rgb(238, 157, 231)"><br>
+    
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Last name" style="background-color:rgb(238, 157, 231)"><br>
+    
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email" placeholder="Email" style="background-color:rgb(238, 157, 231)"><br>
+    
+                <label for="tel">Phone number:</label><br>
+                <input type="tel" name="tel" id="tel" placeholder="Phone number" style="background-color:rgb(238, 157, 231)"><br>
+    
+                <label for="checkbox">Preferred contact method:</label><br>
+                <input type="checkbox" id="contact1" name="contact1>
+                <label for="contact1"> Email</label>
+                <input type="checkbox" id="contact2" name="contact2>
+                <label for="contact2"> Phone</label><br>
+            </fieldset>
+            <br>
+            <fieldset style="width:25%">
+                <legend style="font-size:150%;">Feedback:</legend>
+    
+                <label for="subject">Message subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Message subject" style="background-color:rgb(238, 157, 231)"><br><br>
+    
+                <textarea name="message" rows="15" cols="50" style="background-color:rgb(238, 157, 231)">
+                  </textarea><br>
+    
+                <label for="file">Attach a file:</label>
+                <input type="file" id="file" name="file"><br><hr><br>
+                
+                <input type="submit" value="Send" style="background-color:rgb(238, 157, 231)">
+            </fieldset>
+        </form>
 
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" id="email" placeholder="Email" style="background-color:rgb(238, 157, 231)"><br>
+      </div>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = lavenderblush;
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = lavenderblush;
+      }
+      </script>
 
-            <label for="tel">Phone number:</label><br>
-            <input type="tel" name="tel" id="tel" placeholder="Phone number" style="background-color:rgb(238, 157, 231)"><br>
-
-            <label for="checkbox">Preferred contact method:</label><br>
-            <input type="checkbox" id="contact1" name="contact1>
-            <label for="contact1"> Email</label>
-            <input type="checkbox" id="contact2" name="contact2>
-            <label for="contact2"> Phone</label><br>
-        </fieldset>
-        <br>
-        <fieldset style="width:25%">
-            <legend style="font-size:150%;">Feedback:</legend>
-
-            <label for="subject">Message subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Message subject" style="background-color:rgb(238, 157, 231)"><br><br>
-
-            <textarea name="message" rows="15" cols="50" style="background-color:rgb(238, 157, 231)">
-              </textarea><br>
-
-            <label for="file">Attach a file:</label>
-            <input type="file" id="file" name="file"><br><hr><br>
-            
-            <input type="submit" value="Send" style="background-color:rgb(238, 157, 231)">
-        </fieldset>
-    </form>
 </body>
 </html>
