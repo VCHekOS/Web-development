@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Modified map</title>
+    <script src="../JS/JSmap.js"></script>    
+</head>
+
+<body>
+
+    <h4>Search for a place!</h4>
+
+    Street name:<input type="text" id="street" placeholder=" Type street name here">
+    City: <input type="text" id= "city" placeholder="Type city name here">
+    <input type="button" value="Search" id="search" name="search" onclick="mapSearch()"><br><br>
+
+    <iframe id="mapFrame"
+    src="https://www.google.com/maps?q=Yliopistinkatu36Lappeenranta&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">"
+    </iframe>
+
+</body>
