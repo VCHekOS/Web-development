@@ -49,7 +49,7 @@ function recognition(){
 
     let output = "Your identity code: " + userInput + "\n" + "Is valid: No, ";
     if(Error == "!"){
-        output = "Your identity code: " + userInput + "\n" + "Is valid: Yes" + "\n" + "Sex: " + evod + "\n" + "Age: " + age + "years";
+        output = "Your identity code: " + userInput + "\n" + "Is valid: Yes" + "\n" + "Sex: " + evod + "\n" + "Age: " + age + " years";
     }else{
         output += Error;
     };
