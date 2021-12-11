@@ -39,6 +39,7 @@ function numberVowels(){
 		output = str + " doesn't contain vowels";
 	};
 	alert(output);
+    
 }
 
 function transform(){
